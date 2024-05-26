@@ -1,5 +1,7 @@
 import pytest
-from classes.many_to_many import Article, Magazine, Author
+from classes.many_to_many import Article
+from classes.many_to_many import Author
+from classes.many_to_many import Magazine
 
 class TestMagazine:
     """Magazine in many_to_many.py"""
