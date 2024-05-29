@@ -39,12 +39,7 @@ class Magazine:
     def name(self):
         return self._name
 
-    @name.setter
-    def name(self, new_name):
-        if not isinstance(new_name, str) or not (2 <= len(new_name) <= 16):
-            raise ValueError("Name must be a string between 2 and 16 characters")
-        self._name = new_name
-
+    
     @property
     def category(self):
         return self._category
@@ -74,12 +69,7 @@ class Magazine:
             author_counts[article.author] = author_counts.get(article.author, 0) + 1
         return [author for author, count in author_counts.items() if count > 2]
 
-    @classmethod
-    def top_publisher(cls):
-        if not cls._all_magazines:
-            return None
-        return max(cls._all_magazines, key=lambda magazine: len(magazine.articles()))
-
+    
 
 class Article:
     all_articles = []
